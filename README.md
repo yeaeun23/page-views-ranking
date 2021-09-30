@@ -11,12 +11,14 @@
 
 ## 2. 웹서비스(xml) 예시
 
-    {"summery_time":"2018-05-29 15:10:00"
-    ,"pv_total_today":"1053946"
-    ,"pv_seoul_today":646023
-    ,"pv_seoul_avg_28day":493445
-    ,"pv_seoul_avg_7day":467673
-    ,"pv_seoul_yesterday":526088}
+    {
+        "summery_time":"2018-05-29 15:10:00",
+        "pv_total_today":"1053946",
+        "pv_seoul_today":646023,
+        "pv_seoul_avg_28day":493445,
+        "pv_seoul_avg_7day":467673,
+        "pv_seoul_yesterday":526088
+    }
 
 ## 3. 화면 예시
 
