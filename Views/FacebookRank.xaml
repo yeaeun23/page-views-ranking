@@ -1,0 +1,51 @@
+﻿<Page x:Class="WpfApplication1.Views.FacebookRank"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:local="clr-namespace:WpfApplication1">
+
+    <Grid>
+        <TextBlock Name="ErrMsg" Style="{StaticResource ErrMsg}"></TextBlock>
+        <ItemsControl Name="ArticleList" ItemsSource="{Binding items}" AlternationCount="2">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Grid Name="ArticleListRow" Height="90">
+                        <Grid.Triggers>
+                            <EventTrigger RoutedEvent="Page.Loaded">
+                                <BeginStoryboard>
+                                    <Storyboard TargetProperty="Height">
+                                        <DoubleAnimation To="100" Duration="0:0:0.5"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Grid.Triggers>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="76*"/>
+                            <ColumnDefinition Width="12*"/>
+                            <ColumnDefinition Width="12*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding title}" Grid.Column="0" Style="{StaticResource ArticleListColumn}"/>
+                        <TextBlock Text="{Binding create_time}" Grid.Column="1" Style="{StaticResource ArticleListColumn}" HorizontalAlignment="Center"/>
+                        <TextBlock Text="{Binding likes}"  Grid.Column="2" Style="{StaticResource ArticleListColumn}" HorizontalAlignment="Right"/>
+                    </Grid>
+                    <DataTemplate.Triggers>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="0">
+                            <Setter Property="Background" TargetName="ArticleListRow">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#000" Opacity="0.5"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="ItemsControl.AlternationIndex" Value="1">
+                            <Setter Property="Background" TargetName="ArticleListRow">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="#AAA" Opacity="0.4"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </DataTemplate.Triggers>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Page>
