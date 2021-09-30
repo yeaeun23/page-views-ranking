@@ -9,7 +9,16 @@
 - 기사 조회순 - 어제~오늘
 - 페이스북 좋아요순
 
-## 2. 화면 예시
+## 2. 웹서비스(xml) 예시
+
+    {"summery_time":"2018-05-29 15:10:00"
+    ,"pv_total_today":"1053946"
+    ,"pv_seoul_today":646023
+    ,"pv_seoul_avg_28day":493445
+    ,"pv_seoul_avg_7day":467673
+    ,"pv_seoul_yesterday":526088}
+
+## 3. 화면 예시
 
 ![1_PV 현황](https://user-images.githubusercontent.com/14077108/135400870-0bbd2df1-da6c-46fd-b8a7-cbdfd3391845.png)
 
